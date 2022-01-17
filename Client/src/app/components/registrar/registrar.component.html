@@ -8,26 +8,26 @@
                 <div class="form-group row">
 
                     <div class="col-sm-6">
-                        <label for="form-label">Nome Completo</label>
+                        <label for="form-label">Nome Completo</label><span>*</span>
                         <input [(ngModel)]="Usuario.nome_completo" type="text" class="form-control" name="nome_completo">
                     </div>
     
                     <div class="col-sm-6">
-                        <label for="form-label">Nome de Usuário</label>
+                        <label for="form-label">Nome de Usuário</label><span>*</span>
                         <input [(ngModel)]="Usuario.nome_usuario" type="text" class="form-control" name="nome_usuario">
                     </div>
                     <div class="mb-3">
-                        <label for="form-label">Email</label>
+                        <label for="form-label">Email</label><span>*</span>
                         <input [(ngModel)]="Usuario.email" type="email" class="form-control" name="email">
                     </div>
     
                     <div class="col-sm-6">
-                        <label for="form-label">Senha</label>
+                        <label for="form-label">Senha</label><span>*</span>
                         <input [(ngModel)]="Usuario.senha" type="password" class="form-control" name="senha">
                     </div>
     
                     <div class="col-sm-6">
-                        <label for="form-label">Confirmar senha</label>
+                        <label for="form-label">Confirmar senha</label><span>*</span>
                         <input id="confirmarSenha" type="password" class="form-control" >
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="form-group row">
                     <h2>Endereço</h2>
                     <div class="col-sm-6">
-                        <label for="form-label">CEP</label>
+                        <label for="form-label">CEP</label><span>*</span>
                         <input [(ngModel)]="Usuario.cep" type="text" (blur)="buscarCep()" class="form-control" name="cep"  id="cep" mask="00000-000">
                     </div>
     
@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <label for="form-label">Complemento</label>
+                        <label for="form-label">Complemento</label><span>*</span>
                         <input [(ngModel)]="Usuario.complemento" type="text" class="form-control" name="complemento">
                     </div>
 
@@ -57,7 +57,7 @@
                     </div>
     
                     <div class="col-sm-6">
-                        <label for="form-label">Número</label>
+                        <label for="form-label">Número</label><span>*</span>
                         <input [(ngModel)]="Usuario.numero" type="text" class="form-control" name="numero">
                     </div>
 
