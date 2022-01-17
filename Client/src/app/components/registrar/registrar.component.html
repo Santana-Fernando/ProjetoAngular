@@ -1,0 +1,82 @@
+<div class="container">
+    <br>
+    <h1>Novo Usuário</h1>
+
+    <div class="row">        
+        <div class="col-sm-12">
+            <form>
+                <div class="form-group row">
+
+                    <div class="col-sm-6">
+                        <label for="form-label">Nome Completo</label>
+                        <input [(ngModel)]="Usuario.nome_completo" type="text" class="form-control" name="nome_completo">
+                    </div>
+    
+                    <div class="col-sm-6">
+                        <label for="form-label">Nome de Usuário</label>
+                        <input [(ngModel)]="Usuario.nome_usuario" type="text" class="form-control" name="nome_usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="form-label">Email</label>
+                        <input [(ngModel)]="Usuario.email" type="email" class="form-control" name="email">
+                    </div>
+    
+                    <div class="col-sm-6">
+                        <label for="form-label">Senha</label>
+                        <input [(ngModel)]="Usuario.senha" type="password" class="form-control" name="senha">
+                    </div>
+    
+                    <div class="col-sm-6">
+                        <label for="form-label">Confirmar senha</label>
+                        <input id="confirmarSenha" type="password" class="form-control" >
+                    </div>
+                </div>
+
+                <br />
+                
+                <div class="form-group row">
+                    <h2>Endereço</h2>
+                    <div class="col-sm-6">
+                        <label for="form-label">CEP</label>
+                        <input [(ngModel)]="Usuario.cep" type="text" (blur)="buscarCep()" class="form-control" name="cep"  id="cep" mask="00000-000">
+                    </div>
+    
+                    <div class="col-sm-6">
+                        <label for="form-label">Logradouro</label>
+                        <input [(ngModel)]="Usuario.logradouro" type="text" class="form-control" name="logradouro" disabled>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="form-label">Complemento</label>
+                        <input [(ngModel)]="Usuario.complemento" type="text" class="form-control" name="complemento">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="form-label">Bairro</label>
+                        <input [(ngModel)]="Usuario.bairro" type="text" class="form-control" name="bairro" disabled>
+                    </div>
+    
+                    <div class="col-sm-6">
+                        <label for="form-label">Número</label>
+                        <input [(ngModel)]="Usuario.numero" type="text" class="form-control" name="numero">
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label for="form-label">Estado</label>
+                        <input [(ngModel)]="Usuario.uf" type="text" class="form-control" name="uf" disabled>
+                    </div>
+    
+                    <div class="col-sm-6">
+                        <label for="form-label">Cidade</label>
+                        <input [(ngModel)]="Usuario.cidade" type="text" class="form-control" name="cidade" disabled>
+                    </div>
+                </div>
+            </form>
+            <br>
+            <div class="form-group">
+                <button (click)="registrarNovoUsuario()" type="button" class="btn btn-success">Salvar</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

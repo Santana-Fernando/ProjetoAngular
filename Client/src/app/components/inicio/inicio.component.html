@@ -1,0 +1,39 @@
+
+
+<div class="container">
+  <br>
+  <h1>Lista de Usuários</h1>
+  
+  <div class="table-container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome Completo</th>
+            <th scope="col">Nome de Usuário</th>
+            <th scope="col">E-Mail</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of Usuario">
+                <td>{{usuario.id}}</td>
+                <td>{{usuario.nome_completo}}</td>
+                <td>{{usuario.nome_usuario}}</td>
+                <td>{{usuario.email}}</td>
+                <td><button (click)="atualizar(usuario.id)" type="button" class="btn btn-primary">Editar</button></td>
+                <td><button
+                  class="btn btn-danger"
+                  mwlConfirmationPopover
+                  [popoverTitle]="popoverTitle"
+                  [popoverMessage]="popoverMessage"
+                  placement="left"
+                  (confirm)="remover(usuario.id)"
+                  (cancel)="cancelClicked = true"
+                >
+                  Remover
+                </button></td>
+              </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
